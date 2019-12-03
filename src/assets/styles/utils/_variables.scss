@@ -1,0 +1,35 @@
+/* Custom variables */
+
+:root {
+}
+
+/* Viewports */
+
+$mobile: 320px;
+$mobile-md: 375px;
+$tablet-sm: 768px;
+$tablet: 1024px;
+$desktop-sm: 1280px;
+$desktop: 1440px;
+$desktop-md: 1600px;
+$desktop-lg: 1920px;
+$desktop-xlg: 2560px;
+
+/* Colors */
+
+$black: #000000;
+$white: #ffffff;
+
+/* Offsets */
+
+$offset-mobile: 2rem;
+$offset-desktop: 2.5rem;
+
+/* Transition */
+
+$trs: all 0.4s cubic-bezier(0.33, 0, 0, 1);
+
+/* Box shadow */
+
+$shadow: 0.125rem 0.125rem 0.25rem rgba(211, 214, 215, 0.2), 0 1rem 1rem rgba(211, 214, 215, 0.2), 0 0 0.25rem rgba(211, 214, 215, 0.2),
+  0 0 4rem rgba(211, 214, 215, 0.05), 0 0 2rem rgba(211, 214, 215, 0.05);

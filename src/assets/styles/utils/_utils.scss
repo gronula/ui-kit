@@ -1,0 +1,47 @@
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.only-mobile {
+  display: flex !important;
+
+  @include respond-min(tablet) {
+    display: none !important;
+  }
+}
+
+.only-desktop {
+  display: none !important;
+
+  @include respond-min(tablet) {
+    display: flex !important;
+  }
+}
+
+.wrapper-p {
+  padding-left: $offset-mobile;
+  padding-right: $offset-mobile;
+
+  @include respond-min(tablet) {
+    padding-left: $offset-desktop;
+    padding-right: $offset-desktop;
+  }
+}
+
+.wrapper-m {
+  margin-left: $offset-mobile;
+  margin-right: $offset-mobile;
+
+  @include respond-min(tablet) {
+    margin-left: $offset-desktop;
+    margin-right: $offset-desktop;
+  }
+}
+
+.trs {
+  transition: $trs;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}

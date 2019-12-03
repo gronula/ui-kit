@@ -1,0 +1,18 @@
+@mixin roboto($weight) {
+  @if $weight == 'r' {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+}
+
+@mixin oswald($weight) {
+  @if $weight == 'm' {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+  }
+
+  @if $weight == 'b' {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+  }
+}
