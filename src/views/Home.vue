@@ -6,21 +6,14 @@
     main
       .row
         .col
-          Accordion(
-            :items="accItems"
-          )
-        .col
-          AccordionItem.acc__item(
-            v-for="item in accItems2"
-            :key="Math.random()"
-            :item="item"
-            :height="item.height"
-            :opened="item.opened"
-          )
-            template(#title)
-              h2 {{ item.title }}
-            template(#content)
-              p {{ item.content }}
+          h2 Accordion
+          Accordion
+            AccordionItem(
+              v-for="item in accItems"
+              :key="item.title"
+            )
+              h3(slot="title") {{ item.title }}
+              p(slot="content") {{ item.content }}
 </template>
 
 <script>
@@ -41,26 +34,6 @@
           title: 'Item 3',
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit officiis natus accusantium?',
           opened: false
-        }
-      ],
-      accItems2: [
-        {
-          title: 'Item 1',
-          content: 'Lorem ipsum dolor sit amet consectetur.',
-          opened: true,
-          height: 0
-        },
-        {
-          title: 'Item 2',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea!',
-          opened: false,
-          height: 0
-        },
-        {
-          title: 'Item 3',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit officiis natus accusantium?',
-          opened: false,
-          height: 0
         }
       ]
     }),
@@ -95,6 +68,7 @@
   }
 
   .col {
+    flex-grow: 1;
     width: 50%;
 
     &:nth-of-type(2n) {
